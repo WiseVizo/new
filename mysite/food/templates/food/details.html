@@ -1,6 +1,18 @@
 {% extends 'food/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'food/details.css' %}">
+{% endblock %}
 {% block content %}
-<h2>{{food.name}}</h2>
-<h3>{{food.price}}</h3>
-<h4>{{food.description}}</h4>
+<div class="container">
+  <div class="food-details">
+    <img src="{{food.image}}" alt="Pizza Image" class="food-image">
+    <div class="food-info">
+      <h1 class="food-name">{{food.name}}</h1>
+      <p class="food-description">{{food.description}}</p>
+      <p class="food-price">Price: ${{food.price}}</p>
+      <a href="#" class="add-to-cart-btn">Add to Cart</a>
+    </div>
+  </div>
+</div>
 {% endblock %}

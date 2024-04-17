@@ -1,4 +1,8 @@
 {% extends 'food/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'food/index.css' %}">
+{% endblock %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,9 +14,8 @@
 </head>
 <body>
     {% block content %}
-    <h2>Item List</h2>
+    <h1 class="page-heading">Explore Delicious Delights: Our Food Menu</h1>
     {% for food in food_list %}
-    <!-- <a href="/food/{{food.id}}">{{food.id}} -> {{food.name}}</a> -->
     <div class="food-card">
       <div class="food-image">
         <img src="{{food.image}}" alt="Food Image">
