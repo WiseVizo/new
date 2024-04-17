@@ -11,7 +11,8 @@
       <h1 class="food-name">{{food.name}}</h1>
       <p class="food-description">{{food.description}}</p>
       <p class="food-price">Price: ${{food.price}}</p>
-      <a href="#" class="add-to-cart-btn">Add to Cart</a>
+      <a href="{% url 'food:update_item' food.id %}" class="add-to-cart-btn">Edit</a>
+      <a href="{% url 'food:delete_item' food.id %}" class="add-to-cart-btn">Delete</a>
     </div>
   </div>
 </div>

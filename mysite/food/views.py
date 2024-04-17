@@ -31,3 +31,23 @@ def create_item(request):
         'form': form,
     }
     return render(request, "food/item_form.html", context)
+
+def update_item(request, food_id):
+    item = Food.objects.get(pk=food_id)
+    form = ItemForm(request.POST or None, instance=item)
+    if form.is_valid():
+        form.save()
+        return redirect("food:list_all_foods")
+    context = {
+        'form': form,
+        'item': item,
+    }
+    return render(request, "food/item_form.html", context)
+
+def delete_item(request, food_id):
+    item = Food.objects.get(pk=food_id)
+    if request.method == 'POST':
+        item.delete()
+        return redirect("food:list_all_foods")
+
+    return render(request, "food/remove_item.html", {'item':item})
