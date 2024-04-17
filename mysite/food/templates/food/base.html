@@ -12,9 +12,10 @@
 <body>
     <div class="navbar">
     <a id="brand-name" href="#">FoodApp</a>
-    <a href="#">Add item</a>
+    
     <a href="#">delete item</a>
     <a href="#">View item</a>
+    <a href="{% url 'food:create_item' %}">Add item</a>
     </div>
     {% block content %}
     {% endblock %}
