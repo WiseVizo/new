@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodApp</title>
+    <link rel="stylesheet" href="{% static 'food/index.css' %}">
+</head>
+<body>
+    <div class="navbar">
+    <a id="brand-name" href="#">FoodApp</a>
+    <a href="#">Add item</a>
+    <a href="#">delete item</a>
+    <a href="#">View item</a>
+    </div>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
