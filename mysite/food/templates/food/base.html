@@ -13,6 +13,11 @@
     <div class="navbar">
     <a id="brand-name" href="#">FoodApp</a>
     
+    {% if user.is_authenticated %}
+    <a href="{% url 'users:logout' %}">logout</a>
+    {% else %}
+    <a href="{% url 'users:login' %}">login</a>
+    {% endif %}
     <a href="#">delete item</a>
     <a href="#">View item</a>
     <a href="{% url 'food:create_item' %}">Add item</a>
