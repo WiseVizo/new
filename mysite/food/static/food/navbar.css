@@ -11,6 +11,7 @@ body{
 .navbar {
       background-color: #333;
       overflow: hidden;
+      font-size: larger;
 }
     
 .navbar a {
@@ -18,7 +19,7 @@ body{
       display: block;
       color: #f2f2f2;
       text-align: center;
-      padding: 14px 16px;
+      padding: 25px;
       text-decoration: none;
     }
 
@@ -29,4 +30,44 @@ body{
     
 #brand-name{
     float: left;
+}
+
+/* alerts */
+.alert {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-size: 25px;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.alert-error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.alert-info {
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+.alert-warning {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.closebtn {
+  color: #000;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.closebtn:hover {
+  color: #999;
+  cursor: pointer;
 }
