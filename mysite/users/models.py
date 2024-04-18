@@ -8,4 +8,4 @@ class UserProfile(models.Model):
     location = models.CharField(max_length=100)
 
     def __str__(self) -> str:
-        return self.User.username
+        return self.user.username
