@@ -3,6 +3,7 @@ from .models import Food
 from django.template import loader
 from .forms import ItemForm
 from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
 # Create your views here.
 def greet(request):
     return HttpResponse("Hello! Welcome to our food ordering platform.")
@@ -28,6 +29,12 @@ def details(request, food_id):
         "food": food,
     }
     return render(request, "food/details.html", context)
+
+class DetailsClassView(DetailView):
+    # if any params like food_id in our case they need to go directly into urls
+    model = Food
+    template_name = "food/details.html" 
+    # we don't need to pass context here just replace context_var name with object in html file
 
 def create_item(request):
     form = ItemForm(request.POST or None)
