@@ -1,6 +1,10 @@
 {% extends 'food/base.html' %}
+{% load static %}
 {% block content %}
-<form method="post">
+{% block css %}
+<link rel="stylesheet" href="{% static 'food/item_form.css' %}">
+{% endblock %}
+<form method="post" class="item-form">
     {%csrf_token%}
     {{form}}
     <button type="submit" >Save</button>

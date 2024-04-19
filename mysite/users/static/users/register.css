@@ -1,0 +1,51 @@
+.container {
+    width: 400px; /* Set the width of the container */
+    margin: auto; /* Center the container horizontally */
+    background-color: #f9f9f9; /* Background color */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 30px; /* Padding inside the container */
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.register-header {
+    font-size: 28px; /* Font size of the register header */
+    font-weight: bold; /* Bold font weight */
+    margin-bottom: 20px; /* Bottom margin */
+}
+
+.register-body form {
+    display: flex; /* Use flexbox layout for the form */
+    flex-direction: column; /* Arrange form elements vertically */
+}
+
+.register-body form input[type="text"],
+.register-body form input[type="password"],
+.register-body form input[type="email"] {
+    padding: 15px; /* Padding for text inputs */
+    margin-bottom: 20px; /* Bottom margin */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.register-body form button[type="submit"] {
+    padding: 15px 30px; /* Padding for the submit button */
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor style */
+}
+
+.register-body form button[type="submit"]:hover {
+    background-color: #0056b3; /* Button background color on hover */
+}
+
+.register-body form label {
+    font-weight: bold; /* Make labels bold */
+    color: #333; /* Set label text color */
+    margin-bottom: 5px; /* Bottom margin for labels */
+    margin-top: 5px; /* Bottom margin for labels */
+    font-size: larger;
+}

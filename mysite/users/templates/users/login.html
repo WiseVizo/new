@@ -1,5 +1,19 @@
-<form method="post">
-    {% csrf_token %}
-    {{form}}
-    <button type="submit"> Login </button>
-</form>
+{% extends 'food/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'users/login.css' %}">
+{% endblock %}
+{% block content %}
+<div class="login-container center-div">
+    <div class="login-header">Login</div>
+    <div class="login-body">
+        <form method="post">
+            {% csrf_token %}
+            {{form}}
+            <button type="submit"> Login </button>
+        </form>
+        <span class="register-text" >Don't have an account yet? <a href="{% url 'users:register' %}">register</a></span>
+    </div>
+</div>
+
+{% endblock %}

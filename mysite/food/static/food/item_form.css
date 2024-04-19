@@ -1,0 +1,35 @@
+/* Style form container */
+.item-form {
+    max-width: 400px; /* Set maximum width for the form */
+    margin: auto; /* Center the form horizontally */
+    padding: 20px; /* Add padding */
+    background-color: #f9f9f9; /* Background color */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Style form input fields */
+.item-form input[type="text"],
+.item-form textarea {
+    width: 100%; /* Set width to 100% */
+    padding: 10px; /* Add padding */
+    margin-bottom: 15px; /* Add bottom margin */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+/* Style form submit button */
+.item-form .btn-submit {
+    padding: 10px 20px; /* Add padding */
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor style */
+}
+
+/* Style form submit button on hover */
+.item-form .btn-submit:hover {
+    background-color: #0056b3; /* Button background color on hover */
+}

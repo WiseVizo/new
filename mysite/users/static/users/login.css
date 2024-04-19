@@ -1,0 +1,66 @@
+.login-container {
+    width: 400px; /* Set a wider width for the login container */
+    height: 400px; /* Set a taller height for the login container */
+    margin: auto; /* Center the container horizontally */
+    background-color: #f9f9f9; /* Background color */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 30px; /* Increase padding inside the container */
+    font-size: 28px; /* Increase font size of the login header */
+}
+
+.center-div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Move back by half of its own width and height */
+}
+
+.login-header {
+   
+    font-weight: bold; /* Bold font weight */
+    margin-bottom: 20px; /* Bottom margin */
+}
+
+.login-body form {
+    display: flex; /* Use flexbox layout for the form */
+    flex-direction: column; /* Arrange form elements vertically */
+    font-size: 22px;
+}
+
+/* textarea {
+    font-size: 16px; 
+} */
+
+.login-body form input[type="text"],
+.login-body form input[type="password"] {
+    padding: 10px; /* Increase padding for text inputs */
+    margin-bottom: 20px; /* Bottom margin */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 18px;
+}
+
+.login-body form button[type="submit"] {
+    padding: 15px 30px; /* Increase padding for the submit button */
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor style */
+    margin-bottom: 20px;
+}
+
+.login-body form button[type="submit"]:hover {
+    background-color: #0056b3; /* Button background color on hover */
+}
+
+.login-body form button[type="submit"]:hover {
+    background-color: #0056b3; /* Button background color on hover */
+}
+
+.register-text{
+    font-size: large;
+    margin: 5px;
+
+}
