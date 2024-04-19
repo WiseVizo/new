@@ -2,11 +2,12 @@ from django.shortcuts import redirect, render, HttpResponse
 from .models import Food
 from django.template import loader
 from .forms import ItemForm
+from django.views.generic.list import ListView
 # Create your views here.
 def greet(request):
     return HttpResponse("Hello! Welcome to our food ordering platform.")
 
-def list_all_foods(request):
+def list_all_foods(request): # also a food view but function based
     food_list = Food.objects.all()
     template = loader.get_template("food/index.html")
     context = {
@@ -14,6 +15,12 @@ def list_all_foods(request):
     }
 
     return HttpResponse(template.render(context, request))
+
+class FoodClassView(ListView):
+    model = Food
+    template_name = 'food/index.html'
+    context_object_name = 'food_list'
+
 
 def details(request, food_id):
     food = Food.objects.get(pk=food_id)
