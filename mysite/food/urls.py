@@ -8,7 +8,8 @@ urlpatterns = [
     # path('<int:food_id>/', views.details, name="details"), # function view
     path('greet/', views.greet, name="greet"),
     # for adding items
-    path('add/', views.create_item, name="create_item"),
+    path('add/', views.CreateItemView.as_view(), name="create_item"),
+    # path('add/', views.create_item, name="create_item"),
     #edit item
     path('update/<int:food_id>/', views.update_item, name="update_item"),
     #delete item

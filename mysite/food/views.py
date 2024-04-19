@@ -4,6 +4,8 @@ from django.template import loader
 from .forms import ItemForm
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
+from django.views.generic.edit import CreateView
+from django.contrib.auth.models import User
 # Create your views here.
 def greet(request):
     return HttpResponse("Hello! Welcome to our food ordering platform.")
@@ -45,6 +47,15 @@ def create_item(request):
         'form': form,
     }
     return render(request, "food/item_form.html", context)
+
+class CreateItemView(CreateView):
+    model = Food
+    fields = ["name", "description", "price", "image"]
+    template_name = "food/item_form.html"
+
+    def form_valid(self, form):
+        form.instance.user_name = self.request.user
+        return super().form_valid(form)
 
 def update_item(request, food_id):
     item = Food.objects.get(pk=food_id)
